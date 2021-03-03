@@ -1,0 +1,33 @@
+{
+  "name": "@audibene/ta-npm-package-template",
+  "version": "0.1.1",
+  "description": "Template to create npm package",
+  "main": "src/index.js",
+  "files": [
+    "/src"
+  ],
+  "scripts": {
+    "test": "jest --collect-coverage --forceExit"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Audibene-GMBH/ta-npm-package-template.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Audibene-GMBH/ta-npm-package-template/issues"
+  },
+  "homepage": "https://github.com/Audibene-GMBH/ta-npm-package-template#readme",
+  "dependencies": {},
+  "peerDependencies": {},
+  "devDependencies": {
+    "commitizen": "^4.2.2",
+    "cz-conventional-changelog": "^3.3.0"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
+}
