@@ -3,7 +3,7 @@ import config, { noop } from './config'
 
 let log = config.log || noop // can be overloaded by props below
 
-export class MsgClient {
+export default class MsgClient {
   constructor(props) {
     props = props || {}
     log = props.log || log
@@ -74,4 +74,4 @@ export class MsgClient {
   }
 }
 
-export default MsgClient
+
