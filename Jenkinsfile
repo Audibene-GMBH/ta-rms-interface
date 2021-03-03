@@ -49,7 +49,11 @@ audPipelineBootstrap(pipelineConfig) {
                 sh "npm install --unsafe-perm"
             }
         }
-
+        stage('Test'){
+            container('docker-dind'){
+            sh "npm test"
+            }
+        }
         stage('audit') {
             container('node') {
                 sh "npm audit --audit-level=critical"
