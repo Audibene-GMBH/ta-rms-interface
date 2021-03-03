@@ -1,10 +1,11 @@
 {
   "name": "@audibene/ta-rms-interface",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Simplifies RMS communication for the client",
   "main": "./lib/index.js",
   "files": [
-    "/lib", "/src"
+    "/lib",
+    "/src"
   ],
   "scripts": {
     "test": "jest --collect-coverage --forceExit",
