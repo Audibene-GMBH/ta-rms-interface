@@ -1,29 +1,37 @@
 {
-  "name": "@audibene/ta-npm-package-template",
-  "version": "0.1.1",
-  "description": "Template to create npm package",
-  "main": "src/index.js",
+  "name": "@audibene/ta-rms-interface",
+  "version": "0.1.0",
+  "description": "Simplifies RMS communication for the client",
+  "main": "./lib/index.js",
   "files": [
-    "/src"
+    "/lib"
   ],
   "scripts": {
-    "test": "jest --collect-coverage --forceExit"
+    "test": "jest --collect-coverage --forceExit",
+    "build": "babel src -d lib"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Audibene-GMBH/ta-npm-package-template.git"
+    "url": "git+https://github.com/Audibene-GMBH/ta-rms-interface.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Audibene-GMBH/ta-npm-package-template/issues"
+    "url": "https://github.com/Audibene-GMBH/ta-rms-interface/issues"
   },
-  "homepage": "https://github.com/Audibene-GMBH/ta-npm-package-template#readme",
-  "dependencies": {},
+  "homepage": "https://github.com/Audibene-GMBH/ta-rms-interface#readme",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "pubnub": "^4.29.11"
+  },
   "peerDependencies": {},
   "devDependencies": {
+    "@babel/cli": "^7.13.0",
+    "@babel/core": "^7.13.8",
+    "@babel/preset-env": "^7.13.9",
     "commitizen": "^4.2.2",
-    "cz-conventional-changelog": "^3.3.0"
+    "cz-conventional-changelog": "^3.3.0",
+    "jest": "^26.6.3"
   },
   "config": {
     "commitizen": {
