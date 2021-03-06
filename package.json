@@ -1,6 +1,6 @@
 {
   "name": "@audibene/ta-rms-interface",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "description": "Simplifies RMS communication for the client",
   "main": "./lib/index.js",
   "files": [
