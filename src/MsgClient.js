@@ -74,4 +74,4 @@ export class MsgClient {
   }
 }
 
-export default MsgClient
+
