@@ -19,7 +19,7 @@ export class MsgClient {
     })
   }
 
-  addHandler = callback => {
+  addHandler(callback) {
     if (!callback) return false
     this.pubnub.addListener({
       message: payload => {
@@ -37,22 +37,22 @@ export class MsgClient {
   }
 
   handlers = {} // map messages to callback functions
-  processHandlers = payload => {
+  processHandlers(payload){
     const { message } = payload
     this.handlers[message] && this.handlers[message](payload)
   }
 
-  handle = (message, handler) => {
+  handle(message, handler){
     this.handlers[message] = handler
   }
 
-  stopHandling = message => {
+  stopHandling(message){
     delete this.handlers[message]
   }
 
   // https://www.pubnub.com/docs/first-steps/setup#add-a-listener
 
-  send = (func, msg) => {
+  send(func, msg){
     if (typeof this.pubnub[func] != 'function') return false
 
     const payload = {
@@ -66,10 +66,10 @@ export class MsgClient {
     return true
   }
 
-  publish = msg => {
+  publish(msg){
     return this.send('publish', msg)
   }
-  signal = msg => {
+  signal(msg){
     return this.send('signal', msg)
   }
 }
